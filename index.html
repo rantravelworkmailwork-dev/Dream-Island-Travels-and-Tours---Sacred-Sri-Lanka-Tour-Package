@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sacred Sri Lanka – A Journey of Faith, Culture & Discovery | 8 Days</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar site-nav sticky-top shadow-sm">
+    <div class="container-fluid container-lg d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center gap-3 text-wrap m-0" href="#">
+        <img src="images/dream island logo.jpeg" alt="Dream Island Travels Logo" class="brand-logo" />
+        <div>
+          <span class="brand-title">Dream Island Travels &amp; Tours Pvt Ltd</span>
+          <span class="brand-subtitle">Tailor-Made Holidays across Sri Lanka</span>
+        </div>
+      </a>
+      <div class="d-none d-lg-block nav-motto">Your Dream, Our Destination</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <p class="hero-kicker">PILGRIMAGE &amp; CULTURE • SRI LANKA</p>
+      <h1>Sacred Sri Lanka – A Journey of Faith, Culture &amp; Discovery</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-tagline">A meaningful private journey combining Buddhist pilgrimage, ancient cultural heritage, wildlife, and scenic mountain views.</p>
+      <div class="hero-meta">
+        <span>07 Nights / 08 Days</span>
+        <span>Prepared for Mr. Wu Yue &amp; Family</span>
+        <span>27 Nov – 04 Dec</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- INTRO -->
+    <section class="luxe-card accent">
+      <h3 class="section-title">A Meaningful Family Pilgrimage &amp; Sightseeing Tour</h3>
+      <p class="section-sub">Fulfilling sacred vows and exploring the heart of Sri Lanka</p>
+      <p class="intro-lead">From offering prayers at the sacred Jaya Sri Maha Bodhi tree in Anuradhapura to exploring ancient rock fortresses, wildlife safaris, scenic highlands, and spiritual retreats in Lenagala.</p>
+      <p class="intro-body mb-2">Designed specifically for Mr. Wu Yue and family, this private journey balances spiritual devotion, cultural landmarks, scenic mountain rail journeys, and comfortable travel with individual bedding setups.</p>
+    </section>
+
+    <!-- KEY FACTS -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Tour</span><span class="fact-value">Sacred Sri Lanka</span><span class="fact-note">Private Chauffeur Tour</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Duration</span><span class="fact-value">7N / 8D</span><span class="fact-note">27 Nov – 04 Dec</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Travelers</span><span class="fact-value">4 Pax</span><span class="fact-note">Calculated as Adults (4 Beds)</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Category</span><span class="fact-value">3-Star Budget</span><span class="fact-note">Clean &amp; Family Friendly</span></div></div>
+    </div>
+
+    <!-- MAP -->
+    <section class="luxe-card">
+      <h4 class="section-title">Your Route Map</h4>
+      <p class="section-sub">Tap any pin to see the stay and highlights for that destination.</p>
+      <div id="sri-lanka-map"></div>
+    </section>
+
+    <!-- ACTIVITIES & EXPERIENCES -->
+    <section class="luxe-card">
+      <h4 class="section-title">Activities &amp; Experiences Included</h4>
+      <p class="section-sub">Highlights arranged during your journey.</p>
+      <div>
+        <span class="tag">🛕 Anuradhapura Heritage Tour</span>
+        <span class="tag">🐘 Habarana Elephant Safari</span>
+        <span class="tag">🌾 Habarana Village Tour</span>
+        <span class="tag">🍛 Sri Lankan Traditional Lunch</span>
+        <span class="tag">🥾 Sigiriya Rock Fortress</span>
+        <span class="tag">💃 Cultural Dance Show</span>
+        <span class="tag">🛕 Temple of the Sacred Tooth Relic</span>
+        <span class="tag">☕ Tea Plantation &amp; Tea Factory Visit</span>
+        <span class="tag">🚂 Scenic Train Ride to Ella</span>
+        <span class="tag">🌉 Nine Arch Bridge Visit</span>
+        <span class="tag">⛰️ Little Adam’s Peak Hike</span>
+        <span class="tag">🏙️ Colombo City Tour</span>
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section class="mb-4">
+      <h4 class="mb-3">Day-by-Day Itinerary</h4>
+
+      <div class="accordion" id="itineraryAccordion">
+
+        <!-- Day 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#day1">
+              <span class="day-no">Day 1</span> 27 Nov &bull; Anuradhapura
+            </button>
+          </h2>
+          <div id="day1" class="accordion-collapse collapse show" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Arrive at Bandaranaike International Airport (~12:00 PM noon) and receive a warm welcome from your private chauffeur guide. Drive directly north to the ancient sacred city of Anuradhapura. Check in to your lakeside resort and relax for the evening.</p>
+                  <div>
+                    <span class="tag">🤝 Airport Meet &amp; Greet</span>
+                    <span class="tag">🚗 Scenic Drive to Anuradhapura</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Anuradhapura &mdash; Miridiya Lake Resort<br><strong>Meals:</strong> Dinner included</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day2">
+              <span class="day-no">Day 2</span> 28 Nov &bull; Sigiriya
+            </button>
+          </h2>
+          <div id="day2" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p><span class="slot">Morning</span> Conduct pilgrimage vows and offer special Puja prayers at the sacred Jaya Sri Maha Bodhi tree and surrounding shrines in Anuradhapura.</p>
+                  <p><span class="slot">Afternoon</span> Proceed to Habarana for an exciting 4x4 Habarana Elephant Safari followed by an authentic Habarana Village Tour with an authentic Sri Lankan Traditional Lunch.</p>
+                  <div>
+                    <span class="tag">🛕 Sacred Bodhi Tree Puja</span>
+                    <span class="tag">🐘 Habarana Elephant Safari</span>
+                    <span class="tag">🌾 Habarana Village Tour</span>
+                    <span class="tag">🍛 Sri Lankan Traditional Lunch</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Sigiriya &mdash; Cassandra Culture Resort<br><strong>Meals:</strong> Breakfast, Traditional Lunch &amp; Dinner included</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/srilankanlunch.jpg" alt="Sigiriya" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day3">
+              <span class="day-no">Day 3</span> 29 Nov &bull; Kandy
+            </button>
+          </h2>
+          <div id="day3" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p><span class="slot">Morning</span> Climb the majestic 5th-century Sigiriya Rock Fortress. Afterwards, transfer towards Kandy <em>(Optional stops available en route at Dambulla Cave Temple or a Matale Spice Garden)</em>.</p>
+                  <p><span class="slot">Evening</span> Pay homage at the sacred Temple of the Sacred Tooth Relic in Kandy and watch a traditional Cultural Dance Show.</p>
+                  <div>
+                    <span class="tag">🥾 Sigiriya Rock Fortress</span>
+                    <span class="tag">🛕 Temple of Tooth Relic</span>
+                    <span class="tag">💃 Cultural Dance Show</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Kandy &mdash; Hotel Senani Kandy<br><strong>Meals:</strong> Breakfast &amp; Dinner included</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/tenploftooth.jpg" alt="Cultural show" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day4">
+              <span class="day-no">Day 4</span> 30 Nov &bull; Ella
+            </button>
+          </h2>
+          <div id="day4" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Visit a working Tea Plantation &amp; Tea Factory to learn about traditional Ceylon tea manufacturing <em>(Optional visit to Gem Museum)</em>. Head to the station to board the world-famous Highland Scenic Train to Ella winding through misty tea fields.</p>
+                  <div>
+                    <span class="tag">☕ Tea Plantation &amp; Factory</span>
+                    <span class="tag">🚂 Scenic Train Ride to Ella</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Ella &mdash; Ella Flower Garden Resort <em>(or Hillcrest Ella)</em><br><strong>Meals:</strong> Breakfast &amp; Dinner included</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/teafactory.jpg" alt="Tea factory" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day5">
+              <span class="day-no">Day 5</span> 01 Dec &bull; Ella
+            </button>
+          </h2>
+          <div id="day5" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Spend a full day exploring Ella's natural wonders. Visit the world-famous Nine Arch Bridge to watch trains cross the mountain gorge, and hike up Little Adam’s Peak for panoramic views across Ella Gap.</p>
+                  <div>
+                    <span class="tag">🌉 Nine Arch Bridge Visit</span>
+                    <span class="tag">⛰️ Little Adam’s Peak Hike</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Ella &mdash; Ella Flower Garden Resort <em>(or Hillcrest Ella)</em><br><strong>Meals:</strong> Breakfast &amp; Dinner included</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/ellatrain.jpg" alt="Nine Arch Bridge" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day6">
+              <span class="day-no">Day 6</span> 02 Dec &bull; Lenagala
+            </button>
+          </h2>
+          <div id="day6" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Enjoy breakfast in Ella and check out. Travel down through the hills toward Lenagala. Arrive at the Lenagala Meditation Center for your overnight spiritual stay and peaceful reflection.</p>
+                  <div>
+                    <span class="tag">🚗 Scenic Transfer to Lenagala</span>
+                    <span class="tag">🧘 Meditation Center Stay</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Lenagala &mdash; Staying overnight at the Meditation Center <em>(No hotel booking required)</em><br><strong>Meals:</strong> Center Dining / Local arrangement</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day7">
+              <span class="day-no">Day 7</span> 03 Dec &bull; Negombo
+            </button>
+          </h2>
+          <div id="day7" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Depart Lenagala for Colombo. Enjoy a guided Colombo City Tour taking in historic colonial architecture, Independence Square, and Pettah bazaar before transferring to Negombo for a coastal evening.</p>
+                  <div>
+                    <span class="tag">🏙️ Colombo City Tour</span>
+                    <span class="tag">🏖️ Negombo Coastal Stay</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Negombo &mdash; Earl's Regent Negombo<br><strong>Meals:</strong> Breakfast &amp; Dinner included</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/colombo.jpg" alt="Colombo" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day8">
+              <span class="day-no">Day 8</span> 04 Dec &bull; Departure
+            </button>
+          </h2>
+          <div id="day8" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <p>Enjoy a relaxed breakfast by the beach at Earl's Regent Negombo. Check out and take a quick private transfer to Bandaranaike International Airport for your departure flight (~12:00 PM noon).</p>
+              <div class="stay-info"><strong>Departure Transfer:</strong> Private transfer to airport.<br><strong>Meals:</strong> Breakfast</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACCOMMODATION LIST -->
+    <section class="luxe-card">
+      <h4 class="section-title">Your Selected Accommodations</h4>
+      <p class="section-sub">Requested hotel options tailored for your tour dates.</p>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Anuradhapura</h5><span>27 Nov &bull; 1 Night</span></div>
+            <ul class="hotel-list"><li>Miridiya Lake Resort</li></ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Sigiriya</h5><span>28 Nov &bull; 1 Night</span></div>
+            <ul class="hotel-list"><li>Cassandra Culture Resort</li></ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Kandy</h5><span>29 Nov &bull; 1 Night</span></div>
+            <ul class="hotel-list"><li>Hotel Senani Kandy</li></ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Ella</h5><span>30 Nov &amp; 01 Dec &bull; 2 Nights</span></div>
+            <ul class="hotel-list"><li>Ella Flower Garden Resort <em>(or Hillcrest Ella)</em></li></ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Lenagala</h5><span>02 Dec &bull; 1 Night</span></div>
+            <ul class="hotel-list"><li>Staying at Meditation Center</li></ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Negombo</h5><span>03 Dec &bull; 1 Night</span></div>
+            <ul class="hotel-list"><li>Earl's Regent Negombo</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL TRAIN NOTICE -->
+    <section class="note">
+      <h5>Important Notice Regarding Train Travel</h5>
+      <p>Train services in Sri Lanka are subject to seat availability and may be affected by maintenance, scheduling changes, or unforeseen circumstances beyond our control. In the event of train cancellation or unavailability, comfortable alternative road transport will be provided by your private vehicle.</p>
+    </section>
+
+ <!-- PILGRIMAGE REQUISITES NOTE -->
+    <section class="note">
+      <h5>Pilgrimage Puja Offerings Assistance</h5>
+      <p>These items can be bought straight out at a shop in Sri Lanka. The chauffeur will assist in the process, but no cost is held by the travel agency. The flowers can also be bought near the temple.</p>
+    </section>
+
+    <!-- EXCLUSIONS NOTE -->
+    <section class="luxe-card">
+      <h4 class="mb-3">Package Details &amp; Exclusions</h4>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="package-box">
+            <h5>The above proposal includes</h5>
+            <ul class="package-list">
+              <li>Private air-conditioned vehicle with dedicated chauffeur guide throughout.</li>
+              <li>Reserved train tickets for the Scenic Mountain Train to Ella (subject to availability).</li>
+              <li>Hotel accommodations as listed on Half Board basis (Breakfast &amp; Dinner).</li>
+              <li>Sri Lankan Traditional Lunch during the Habarana Village Tour.</li>
+              <li>All highway tolls, fuel, parking, and driver expenses.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="package-box excluded">
+            <h5>Not Included (Direct Pay / Exclusions)</h5>
+            <ul class="package-list">
+              <li><strong>Site Entrance Tickets:</strong> Anuradhapura Sacred City, Sigiriya Rock, and Kandy Temple of the Tooth.</li>
+              <li><strong>Optional Excursions:</strong> Ayurveda Massage, Dambulla Golden Buddha, Matale Spice Garden, and Gem Museum.</li>
+              <li>The cost for arranging sacred Puja items in Anuradhapura.</li>
+              <li>Other lunches and personal beverages.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="agency-footer">
+    <div class="container px-3">
+      <div class="footer-top-row">
+        <div class="d-flex align-items-center gap-3">
+          <img src="images/dream island logo.jpeg" alt="Dream Island Logo" class="footer-logo">
+          <div>
+            <h5>Dream Island Travels &amp; Tours Pvt Ltd</h5>
+            <span class="footer-sub">Tailor-Made Holidays across Sri Lanka</span>
+          </div>
+        </div>
+        <div class="footer-tagline text-md-end">
+          <span class="d-block footer-tagline-main">Culture &bull; Wildlife &bull; Adventures</span>
+          <span class="footer-tagline-sub">&ldquo;Your Dream, Our Destination&rdquo;</span>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-lg-8">
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex align-items-start gap-2">
+              <span>📍</span>
+              <a href="https://maps.app.goo.gl/XyPVxmkMoir6SZHaA?g_st=awb" target="_blank" rel="noopener" class="footer-contact-text">357/1, Waththegedara, Vithikuliya, Sri Lanka</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>✉️</span>
+              <a href="mailto:Info@dreamislandtravels.com" class="footer-contact-text">Info@dreamislandtravels.com</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1877F2" class="flex-shrink-0" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-contact-text">facebook.com/dreamislandtravels</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>🦉</span>
+              <a href="https://www.tripadvisor.co.uk/Attraction_Review-g293962-d34504009-Reviews-Dream_Island_Travels_Tours_Pvt_Ltd-Colombo_Western_Province.html" target="_blank" rel="noopener" class="footer-contact-text">TripAdvisor Reviews</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="contact-call-card d-inline-block text-start w-100">
+            <span class="label">Contact Us</span>
+            <a href="tel:+94743935369" class="phone-link d-block">+94 74 393 5369</a>
+            <a href="tel:+94767070706" class="phone-link d-block">+94 76 707 0706</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; Dream Island Travels &amp; Tours Pvt Ltd. All rights reserved. | Reg. No. PV00301414</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
